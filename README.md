@@ -8,11 +8,13 @@ to find the longest palindrome in a given string.
 
 `GET /java-palindrome-example/palindrome/<string>`
 
-Parses the string provided and finds the largest palindrome that it contains.
+Parses the string provided and finds the largest palindrome that it contains. An optional query parameter
+of `type` can also be set to `slow` in this case the service will use a significantly slower recursive
+algorithm.
 
 ### Example 
 
-`GET /java-palindrome-example/palindrome/testingpalindromefoobarraboof`
+`GET /java-palindrome-example/palindrome/testingpalindromefoobarraboof?type=slow`
 
 ```json
 {
