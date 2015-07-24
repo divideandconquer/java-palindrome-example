@@ -31,4 +31,18 @@ public class PalindromeService {
 		obj.put("palindrome", ret);
 		return obj.toString();
 	}
+	
+	// This exposes the service through the CLI
+	public static void main(String[] args) {
+		String type = "";
+		String input = "";
+		if (args.length >= 1) {
+			input = args[0];
+		}
+		if (args.length >= 2) {
+			type = args[1];
+		}
+		PalindromeService p = new PalindromeService();
+		System.out.println(p.findLargestPalindrome(input, type));
+	}
 }
