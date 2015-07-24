@@ -19,7 +19,7 @@ public class Manacher implements Parser {
 	public String findLargestPalindrome(String input) {
 		String result = "";
 		if ( input != null && input.length() > 0 ) {
-			char[] withBoundaries = addBoundaries(input.toCharArray());
+			char[] withBoundaries = addBoundaries(input.toLowerCase().toCharArray());
 			int[] p = new int[withBoundaries.length]; // holds the distance to the center of the palindrome including boundaries
 			int c = 0; // c marks the center of the palindrome 
 			int r = 0; // r marks the right most boundary of the palindrome
